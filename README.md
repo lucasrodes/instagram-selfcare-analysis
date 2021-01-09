@@ -2,8 +2,14 @@
 
 <h3>Visual analysis of images from Instagram posts with hashtag #selfcare</h3>
 
+<br>
 
-Visual analysis of Instagram posts with tag [`#selfcare`](https://www.instagram.com/explore/tags/selfcare/).
+This project aims to analyze high-level visual patterns from Instagram posts tagged with hashtag
+[`#selfcare`](https://www.instagram.com/explore/tags/selfcare/).
+
+
+The code is built using Python and is distributed under [GPL-3.0 License](LICENSE).
+
 
 ### Content
 
