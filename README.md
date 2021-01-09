@@ -1,5 +1,7 @@
 # [`#selfcare`](https://www.instagram.com/explore/tags/selfcare/) 🛀
-## Visual analysis of images from Instagram posts with hashtag #selfcare 
+
+<h3>Visual analysis of images from Instagram posts with hashtag #selfcare</h3>
+
 
 Visual analysis of Instagram posts with tag [`#selfcare`](https://www.instagram.com/explore/tags/selfcare/).
 
