@@ -1,4 +1,4 @@
-# Instagram [`#selfcare`](https://www.instagram.com/explore/tags/selfcare/)
+# [`#selfcare`](https://www.instagram.com/explore/tags/selfcare/) 🛀 - Instagram
 
 Visual analysis of Instagram posts with tag [`#selfcare`](https://www.instagram.com/explore/tags/selfcare/).
 
