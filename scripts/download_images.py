@@ -8,8 +8,8 @@ import os
 import instaloader
 
 
-NUM_POSTS = 1000
-OUTPUT_FOLDER = "data/original/"
+NUM_POSTS = 1000  # CHOOSE THE NUMBER OF POSTS
+OUTPUT_FOLDER = "data/original/"  # MAKE SURE THAT THIS FOLDER EXISTS
 SLEEP_TIME = 2  # Sleep time (in seconds) between image downloads
 
 class IGImageDownloader:
