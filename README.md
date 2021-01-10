@@ -30,6 +30,8 @@ However, other dates are also present. Details on the date occurences can be fou
 
 The created dataset contains **3526 images**.
 
+> [Read more](#prepare-the-dataset) to prepare your dataset.
+
 
 ## Results
 ### Palette
