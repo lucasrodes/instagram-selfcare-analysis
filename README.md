@@ -21,19 +21,22 @@ The code is built using Python and is distributed under [GPL-3.0 License](LICENS
 TODO
 
 ## Data
-The experiments have been done using images from Instagram posts with hashtag `#selfcare`. The images have been retrieved mostly
-from the following days:
+![](results/collage.jpg)
+
+The experiments have been done using images from Instagram posts with the hashtag `#selfcare`. The images have been retrieved mostly from the following days:
 
 - 2021-01-07
 - 2021-01-08
 - 2021-01-10
 
-In total, 2900 images have been used, which have been resized to 224x224 pixels. In order to minimize the impact of resizing (it can lead to noticeable distortions), only near-squared images have eenb used.
+However, other dates are also present. Details on the date occurences can be found in [this file](results/stats_dates.csv).
+
+The created dataset contains **3526 images**.
+
 
 ## Results
 > To recreate the results obtained below, check section [Use the code](#use-the-code).
 
-![](results/collage.jpg)
 ## Use the code
 The core code of the project lives in folder [scripts](scripts). 
 ### Installation
@@ -53,3 +56,5 @@ Next, reshape them accordingly.
 ```
 $ python scripts/reshape_images.py
 ```
+
+have been resized to 224x224 pixels. In order to minimize the impact of resizing (it can lead to noticeable distortions), only near-squared images have been used.
