@@ -1,6 +1,7 @@
 import colorgram
 from PIL import Image
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 COLLAGE_PATH = "results/collage.jpg" # input file
