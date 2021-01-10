@@ -7,7 +7,7 @@ import instaloader
 
 NUM_POSTS = 1000
 OUTPUT_FOLDER = "../data/"
-
+SLEEP_TIME = 2  # Sleep time (in seconds) between image downloads
 
 class IGImageDownloader:
     def __init__(self, bot, hashtag):
@@ -32,7 +32,7 @@ class IGImageDownloader:
                 bot.download_pic(output_path, url, datetime.datetime.now())
             except:
                 break # If there are any errors, we break out of the loop
-            time.sleep(2)
+            time.sleep(SLEEP_TIME)
 
 
 def main():
