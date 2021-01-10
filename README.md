@@ -35,8 +35,18 @@ The created dataset contains **3526 images**.
 
 
 ## Results
+### Palette
+The following palette was found as the most descriptive for the dataset (10 colours). More details on the colours are
+found in [this file](results/palette_rgb_codes.csv).
 
 ![](results/palette.png)
+
+The following bar plot, illustrates the relevance of each palette component along with the corresponding RGB code.
+
+The higher the bar, the more presence it had in the dataset.
+
+![](results/palette_proportion.png)
+
 ## Use the code
 The core code of the project lives in folder [scripts](scripts), where multiple scripts are found. 
 ### Installation
@@ -69,12 +79,14 @@ This script resizes the images to 224x224 pixels. In order to minimize the impac
 distortions), only near-squared images have been used.
 
 ### Build data collage
-Use the script [`build_collage.py`](scripts/build_collage.py). By default, the generted collage is stored as
-[results/collage.jpg](results/collage.jpg).
+Use the script [`build_collage.py`](scripts/build_collage.py).
 
 ```
 $ python scripts/build_collage.py
 ```
+
+By default, the generted collage is stored as
+[results/collage.jpg](results/collage.jpg).
 
 ### Obtain palette
 Use the script [`get_palette.py`](scripts/build_collage.py).
@@ -82,3 +94,19 @@ Use the script [`get_palette.py`](scripts/build_collage.py).
 ```
 $ python scripts/get_palette.py
 ```
+
+This will do the following (by default):
+- Obtain a 10-length colour palette and store it as [`results/palette_rgb_codes.csv`](results/palette_rgb_codes.csv).
+- Generate the colour palette. Saves image as [`results/palette.png`](results/palette.png)
+- Generate the colour palette bar plot, illustrating presence rate. Saves image as [`results/palette_proportion.png`](results/palette_proportion.png)
+
+### Others
+
+#### Some stats (post's date occurence)
+Use the script [`get_stats.py`](scripts/get_stats.py).
+
+```
+$ python scripts/get_stats.py
+```
+
+By default, it saves results as [`results/stats_dates.csv`](results/stats_dates.csv)
