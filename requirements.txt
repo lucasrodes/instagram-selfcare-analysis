@@ -3,3 +3,4 @@ instaloader==4.6
 numpy==1.19.5
 colorgram.py==1.2.0
 numpy==1.19.5
+matplotlib==3.3.3
