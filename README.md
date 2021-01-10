@@ -35,26 +35,50 @@ The created dataset contains **3526 images**.
 
 
 ## Results
-> To recreate the results obtained below, check section [Use the code](#use-the-code).
 
+![](results/palette.png)
 ## Use the code
-The core code of the project lives in folder [scripts](scripts). 
+The core code of the project lives in folder [scripts](scripts), where multiple scripts are found. 
 ### Installation
-Make sure to have [python](https://www.python.org/downloads/) installed. 
+Make sure to have [python](https://www.python.org/downloads/) installed.
+
 ```
 $ pip install -r requirements.txt
 ```
 
+_This project was developed using Python 3.8_
+
 ### Prepare the dataset
 #### Download images
+Use the script [`download_images.py`](scripts/download_images.py). By default, images are stored under `data/original`
+(make sure it exists).
+
 ```
 $ python scripts/download_images.py
 ```
 
-#### Reshape images
-Next, reshape them accordingly.
+#### Process images
+Use the script [`reshape_images.py`](scripts/reshape_images.py). By default, images are stored under `data/processed`
+(make sure it exists).
+
 ```
 $ python scripts/reshape_images.py
 ```
 
-have been resized to 224x224 pixels. In order to minimize the impact of resizing (it can lead to noticeable distortions), only near-squared images have been used.
+This script resizes the images to 224x224 pixels. In order to minimize the impact of resizing (it can lead to noticeable
+distortions), only near-squared images have been used.
+
+### Build data collage
+Use the script [`build_collage.py`](scripts/build_collage.py). By default, the generted collage is stored as
+[results/collage.jpg](results/collage.jpg).
+
+```
+$ python scripts/build_collage.py
+```
+
+### Obtain palette
+Use the script [`get_palette.py`](scripts/build_collage.py).
+
+```
+$ python scripts/get_palette.py
+```
