@@ -26,6 +26,7 @@ from the following days:
 
 - 2021-01-07
 - 2021-01-08
+- 2021-01-10
 
 In total, 2900 images have been used, which have been resized to 224x224 pixels. In order to minimize the impact of resizing (it can lead to noticeable distortions), only near-squared images have eenb used.
 
