@@ -12,13 +12,10 @@ The code is built using Python and is distributed under [GPL-3.0 License](LICENS
 
 ### Content
 
-- [Project Overview](#project-overview)
 - [Data](#data)
 - [Results](#results)
 - [Use the code](#use-the-code)
 
-## Project Overview
-TODO
 
 ## Data
 ![](results/collage.jpg)
