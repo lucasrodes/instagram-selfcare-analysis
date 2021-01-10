@@ -65,11 +65,11 @@ $ python scripts/download_images.py
 ```
 
 #### Process images
-Use the script [`reshape_images.py`](scripts/reshape_images.py). By default, images are stored under `data/processed`
+Use the script [`process_images.py`](scripts/process_images.py). By default, images are stored under `data/processed`
 (make sure it exists).
 
 ```
-$ python scripts/reshape_images.py
+$ python scripts/process_images.py
 ```
 
 This script resizes the images to 224x224 pixels. In order to minimize the impact of resizing (it can lead to noticeable
