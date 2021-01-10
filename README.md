@@ -13,6 +13,7 @@ The code is built using Python and is distributed under [GPL-3.0 License](LICENS
 ### Content
 
 - [Project Overview](#project-overview)
+- [Data](#data)
 - [Results](#results)
 - [Use the code](#use-the-code)
 
@@ -33,10 +34,11 @@ In total, 2900 images have been used, which have been resized to 224x224 pixels.
 
 ![](results/collage.jpg)
 ## Use the code
-The core code of the project lives in folder [scripts](scripts).
+The core code of the project lives in folder [scripts](scripts). 
 ### Installation
+Make sure to have [python](https://www.python.org/downloads/) installed. 
 ```
-$ python setup.py install
+$ pip install -r requirements.txt
 ```
 
 ### Prepare the dataset
@@ -46,7 +48,7 @@ $ python scripts/download_images.py
 ```
 
 #### Reshape images
-Next, reshape them accordingly (only nearly-squared are preserved.
+Next, reshape them accordingly.
 ```
 $ python scripts/reshape_images.py
 ```
