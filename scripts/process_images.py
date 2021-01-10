@@ -1,11 +1,14 @@
-"""Process images."""
+"""Process images.
+
+Execute script from root project.
+"""
 import time
 import os
 from PIL import Image
 
 
-ORIGINAL_DIR = "pics_3"
-PROCESSED_DIR = "pics_3_processed"
+ORIGINAL_DIR = "data/original"
+PROCESSED_DIR = "data/processed"
 RESIZE = (224, 224)
 
 

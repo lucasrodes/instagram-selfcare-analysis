@@ -1,4 +1,7 @@
-"""Download images."""
+"""Download images.
+
+Execute script from root project.
+"""
 import time
 import datetime
 import os
@@ -6,7 +9,7 @@ import instaloader
 
 
 NUM_POSTS = 1000
-OUTPUT_FOLDER = "../data/"
+OUTPUT_FOLDER = "data/original/"
 SLEEP_TIME = 2  # Sleep time (in seconds) between image downloads
 
 class IGImageDownloader:
