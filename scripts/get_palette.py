@@ -36,15 +36,15 @@ def get_palette_and_proportion_from_path():
     return palette, proportion
 
 
-def generate_palette_fig(palette):
+def generate_palette_fig(palette, output_path):
     print("> Generating palette...")
     plt.figure(figsize=(NUM_COLORS_PALETTE*10, 10))
     plt.imshow(palette)
     plt.axis('off')
-    plt.savefig(PALETTE_PATH, dpi=300, format="png")
+    plt.savefig(output_path, dpi=300, format="png")
 
 
-def generate_palette_bars(palette, proportion):
+def generate_palette_bars(palette, proportion, output_path):
     print("> Generating palette with proportion img...")
     fig = plt.figure()
     ax = fig.add_axes([0,0,1,1])
@@ -71,22 +71,29 @@ def generate_palette_bars(palette, proportion):
     )
     colors_ticks = [f"RGB{tuple(c)}" for c in palette[0].tolist()]
     plt.xticks(x, colors_ticks, rotation='vertical')
-    plt.savefig(PALETTE_PROP_PATH, dpi=100, bbox_inches="tight", format="png")
+    plt.savefig(output_path, dpi=100, bbox_inches="tight", format="png")
+
+
+def extract_palette_proportion(collage_im_path, num_colors_palette=NUM_COLORS_PALETTE, save_colors=False):
+    # Load collage
+    im_collage = Image.open(collage_im_path)
+    # Extract colors
+    colors = colorgram.extract(im_collage, num_colors_palette)
+    palette, proportion = get_palette_and_proportion(colors)
+    # Save colors
+    if save_colors:
+        save_palete_colors(colors)
+    return palette, proportion
 
 def main():
     if FORCE_REEXECUTION or not os.path.isfile(PALETTE_CODES_PATH):
-        # Load collage
-        im_collage = Image.open(COLLAGE_PATH)
-        # Extract colors (and save)
-        colors = colorgram.extract(im_collage, NUM_COLORS_PALETTE)
-        save_palete_colors(colors)
-        palette, proportion = get_palette_and_proportion(colors)
+        palette, proportion = extract_palette_proportion(COLLAGE_PATH, NUM_COLORS_PALETTE, save_colors=True)
     else:
         palette, proportion = get_palette_and_proportion_from_path()
     
     # Generate and save palette image
-    generate_palette_fig(palette)
-    generate_palette_bars(palette, proportion)
+    generate_palette_fig(palette, PALETTE_PATH)
+    generate_palette_bars(palette, proportion, PALETTE_PROP_PATH)
 
 if __name__ == "__main__":
     main()
