@@ -5,6 +5,7 @@ Execute script from root project.
 import time
 import os
 from PIL import Image
+from utils import load_files
 
 
 ORIGINAL_DIR = "data/original"
@@ -13,7 +14,7 @@ RESIZE = (224, 224)
 
 
 def process_images(input_dir, output_dir, resize=RESIZE):
-    files = [file for file in os.listdir(path=input_dir) if file.endswith(".jpg")]
+    files = load_files(input_dir, format="jpg")
     for i, file in enumerate(files):
         img_PIL = Image.open(os.path.join(input_dir, file))
         if abs(1 - img_PIL.width / img_PIL.height) < 0.15:
