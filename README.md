@@ -39,7 +39,7 @@ the results obtained with generic Instagram pictures.
 
 
 ## Results
-Below we illustrate the results from the `#
+
 ### Palette
 The following palette was found as the most descriptive for the dataset (10 colours). More details on the colours are
 found in [this file](results/palette_rgb_codes.csv).
