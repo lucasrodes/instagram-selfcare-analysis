@@ -20,7 +20,7 @@ COLLAGE_IM = "../results/collage_arbitrary.png" # "../results/collage.png"
 PALETTE_IM = "../results/palette_arbitrary.png"  # "../results/palette.png"
 PALETTE_PROPORTION_IM = "../results/palette_proportion_arbitrary.png"  # "../results/palette_proportion.png"
 RESIZE = (100, 100)
-TAGS = ["tbt", "followme", "repost", "photooftheday", "follow", "like4like", "nature"]  # ["selfcare"]
+TAGS = ["tbt", "followme", "repost", "photooftheday", "picoftheday", "follow", "like4like", "nature"]  # ["selfcare"]
 
 def run_experiment(tags, num_posts_per_tag, original_dir, processed_dir, resize=(100, 100), collage_image_path,
                     palette_image_path, palette_proportion_image_path,
