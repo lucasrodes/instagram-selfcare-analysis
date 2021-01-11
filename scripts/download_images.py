@@ -38,10 +38,14 @@ class IGImageDownloader:
             time.sleep(SLEEP_TIME)
 
 
-def main():
+def download_images(hashtag, num_posts, output_dir):
     bot = instaloader.Instaloader() # alternative: bot.login(user=USER, passwd=PWD)
-    downloader = IGImageDownloader(bot, hashtag="selfcare")
-    downloader.run(NUM_POSTS, OUTPUT_FOLDER)
+    downloader = IGImageDownloader(bot, hashtag=hashtag)
+    downloader.run(num_posts, output_dir)
+
+
+def main():
+    download_images(hashtag="selfcare", num_posts=NUM_POSTS, output_dir=OUTPUT_FOLDER)
 
 
 if __name__ == "__main__":
