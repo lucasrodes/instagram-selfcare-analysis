@@ -30,10 +30,16 @@ However, other dates are also present. Details on the date occurences can be fou
 
 The created dataset contains **3526 images**.
 
+An additional dataset has been prepared, with 2600 images, containing images from generic hashtags such as: `#tbt`,
+`#followme`, `#repost`, `#photooftheday`, `#picoftheday`, `#follow`, `#like4like`, `#nature`. This way, we can compare
+the results obtained with generic Instagram pictures.
+
+
 > [Read more](#prepare-the-dataset) to prepare your dataset.
 
 
 ## Results
+Below we illustrate the results from the `#
 ### Palette
 The following palette was found as the most descriptive for the dataset (10 colours). More details on the colours are
 found in [this file](results/palette_rgb_codes.csv).
@@ -45,6 +51,12 @@ The following bar plot, illustrates the relevance of each palette component alon
 The higher the bar, the more presence it had in the dataset.
 
 ![](results/palette_proportion.png)
+
+### Palette generic IG post
+
+![](results/palette_arbitrary.png)
+
+![](results/palette_proportion_arbitrary.png)
 
 ## Use the code
 The core code of the project lives in folder [scripts](scripts), where multiple scripts are found. 
