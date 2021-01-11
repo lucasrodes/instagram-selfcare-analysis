@@ -2,6 +2,7 @@
 from PIL import Image
 import os
 import numpy as np
+from utils import load_images
 
 
 PROCESSED_DIR = "data/processed/"
@@ -36,19 +37,25 @@ class Collage:
 
     def save(self, output_filename):
         if self.collage_im:
-            with open(output_filename, 'w') as f:
+            with open(output_filename, 'wb') as f:
                 self.collage_im.save(f)
             print(f"Image saved at {output_filename}")
 
 
-def main():
+def build_collage(input_dir, output):
     # Load images
-    files = [file for file in os.listdir(path=PROCESSED_DIR) if file.endswith(".jpg")]
-    images = [Image.open(os.path.join(PROCESSED_DIR, file)) for file in files]
+    images = load_images(input_dir)
     # Build and save collage
     collage = Collage(images)
     collage.build()
-    collage.save(COLLAGE_IM)
+    collage.save(output)
+
+
+def main():
+    build_collage(
+        input_dir=PROCESSED_DIR,
+        output=COLLAGE_IM
+    )
 
 
 if __name__ == "__main__":
