@@ -1,59 +1,77 @@
 # [`#selfcare`](https://www.instagram.com/explore/tags/selfcare/) 🛀
 
-<h3>Colour analysis of images from Instagram posts with hashtag #selfcare</h3>
+### Colour analysis of images from Instagram posts with hashtag #selfcare
 
 <br>
 
-This project, firstly, aims to analyse high-level colour patterns from Instagram posts tagged with hashtag
-[`#selfcare`](https://www.instagram.com/explore/tags/selfcare/). Secondly, the project analyses colour patterns from Instagram posts that are tagged with some of the most commonly used hashtags. (MILLORAR)
+This project explores high-level colour patterns present in Instagram posts with hashtag
+[`#selfcare`](https://www.instagram.com/explore/tags/selfcare/). To this end, it compares pixel colour values of #selfcare-tagged images and generic images.
 
 The code is built using Python and is distributed under [GPL-3.0 License](LICENSE).
-
 
 ### Content
 
 - [Data](#data)
+- [Method](#method)
 - [Results](#results)
 - [Use the code](#use-the-code)
 
 
+
+ to illustrate which colour features
+This project, firstly, aims to analyse high-level colour patterns from Instagram posts tagged with hashtag
+[`#selfcare`](https://www.instagram.com/explore/tags/selfcare/). Secondly, the project analyses colour patterns from Instagram posts that are tagged with some of the most commonly used hashtags. (MILLORAR)
+
 ## Data
 ![](results/collage.jpg)
 
-For this experiment, 2 datasets have been created. One containing images from Instagram tagged with #selfcare and the other containing generic Instagram images. 
+For this experiment, 2 datasets have been created. One containing Instagram images with hashtag #selfcare and the other
+containing generic Instagram images. 
 
-### #selfcare dataset
+> [Read more](#prepare-the-dataset) to prepare your dataset.
 
-This created dataset containes **3526 images** with #selfcare. The images have been retrieved mostly from the following days:
+### `#selfcare` dataset
+A total of 3526 images have been retrieved mostly from the following days:
+
 - 2021-01-07
 - 2021-01-08
 - 2021-01-10
 
 However, other dates are also present. Details on the date occurences can be found in [this file](results/stats_dates.csv).
 
-### generic dataset
+### Generic dataset
+A total of 3526 images have been retrieved. There come from different hashtags: `#tbt`, `#followme`, `#repost`, `#photooftheday`,
+`#picoftheday`, `#follow`, `#like4like`, `#nature`, `#instagood`, `#instadaily`, `#instagram`, `#happy`. 
 
-This dataset contains **3562 images** from generic hashtags, such as: `#tbt`, `#followme`, `#repost`, `#photooftheday`, `#picoftheday`, `#follow`, `#like4like`, `#nature`, `#instagood`, `#instadaily`, `#instagram`, `#happy`. We deemed that the images tagged with these 12 hashtags present a wide variety of imagery that may be representative of Instagram as a whole. The hashtags have been obtained from [this list of the most used Instagram hashtags](https://influencermarketinghub.com/most-popular-instagram-hashtags/).
+We deemed that the images tagged with these 12 hashtags present a wide variety of imagery that may be representative of Instagram as a whole. The hashtags have been obtained from [this list of the most used Instagram hashtags](https://influencermarketinghub.com/most-popular-instagram-hashtags/).
 
+## Method
 
-> [Read more](#prepare-the-dataset) to prepare your dataset.
+For both datasets:
 
+* **Download images**: Images are downloaded from Instagram posts with specific hashtags using
+  [`instaloader`](https://instaloader.github.io/) package.
+* **Process images**: Near-squared images are resized into (100, 100) pixel images. 
+* **Build collage**: Build a collage with all (100, 100) processed images. Example [here](results/collage.png).
+* **Extract palette**: Finally, the colour palette is extracted from the previously generated collage, leveraging
+  [`colorgram.py`](https://github.com/obskyr/colorgram.py) library.
 
+Finally, once results for both datasets are obtained:
+* **Comparison**: Palettes obtained from both datasets are compared.
 ## Results
-
-### Palette
-The following palette was found as the most descriptive for the dataset (10 colours). More details on the colours are
-found in [this file](results/palette_rgb_codes.csv).
+In the following, results obtained from both datasets are presented.
+### `#selfcare`
+The following palette was found as the most descriptive 10-colours palette for the dataset. More details on the colours
+are found in [this file](results/palette_rgb_codes.csv), including their relative importance.
 
 ![](results/palette.jpg)
 
-The following bar plot, illustrates the relevance of each palette component along with the corresponding RGB code.
-
-The higher the bar, the more presence it had in the dataset.
+The following bar plot, illustrates the relative share of importance of each palette component along with the corresponding RGB code. The
+higher the bar, the more presence it had in the dataset. Precise values can be found [here](results/palette_rgb_codes_jpg).
 
 ![](results/palette_proportion.jpg)
 
-### Palette generic IG post
+### Generic
 Below I illustrate the palette for a generic post in Instagram.
 
 ![](results/palette_arbitrary.jpg)
