@@ -1,11 +1,11 @@
 # [`#selfcare`](https://www.instagram.com/explore/tags/selfcare/) 🛀
 
-<h3>Visual analysis of images from Instagram posts with hashtag #selfcare</h3>
+<h3>Colour analysis of images from Instagram posts with hashtag #selfcare</h3>
 
 <br>
 
-This project aims to analyze high-level visual patterns from Instagram posts tagged with hashtag
-[`#selfcare`](https://www.instagram.com/explore/tags/selfcare/).
+This project, firstly, aims to analyse high-level colour patterns from Instagram posts tagged with hashtag
+[`#selfcare`](https://www.instagram.com/explore/tags/selfcare/). Secondly, the project analyses colour patterns from Instagram posts that are tagged with some of the most commonly used hashtags. (MILLORAR)
 
 The code is built using Python and is distributed under [GPL-3.0 License](LICENSE).
 
@@ -20,19 +20,20 @@ The code is built using Python and is distributed under [GPL-3.0 License](LICENS
 ## Data
 ![](results/collage.jpg)
 
-The experiments have been done using images from Instagram posts with the hashtag `#selfcare`. The images have been retrieved mostly from the following days:
+For this experiment, 2 datasets have been created. One containing images from Instagram tagged with #selfcare and the other containing generic Instagram images. 
 
+### #selfcare dataset
+
+This created dataset containes **3526 images** with #selfcare. The images have been retrieved mostly from the following days:
 - 2021-01-07
 - 2021-01-08
 - 2021-01-10
 
 However, other dates are also present. Details on the date occurences can be found in [this file](results/stats_dates.csv).
 
-### Aditional notes
-- The created dataset contains **3526 images**.
-- An additional dataset has been prepared, with 2600 images, containing images from generic hashtags such as: `#tbt`,
-`#followme`, `#repost`, `#photooftheday`, `#picoftheday`, `#follow`, `#like4like`, `#nature`. This way, we can compare
-the results obtained with generic Instagram pictures.
+### generic dataset
+
+This dataset contains **3562 images** from generic hashtags, such as: `#tbt`, `#followme`, `#repost`, `#photooftheday`, `#picoftheday`, `#follow`, `#like4like`, `#nature`, `#instagood`, `#instadaily`, `#instagram`, `#happy`. We deemed that the images tagged with these 12 hashtags present a wide variety of imagery that may be representative of Instagram as a whole. The hashtags have been obtained from [this list of the most used Instagram hashtags](https://influencermarketinghub.com/most-popular-instagram-hashtags/).
 
 
 > [Read more](#prepare-the-dataset) to prepare your dataset.
