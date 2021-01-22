@@ -15,9 +15,9 @@ NUM_COLORS_PALETTE = 10
 FORCE_REEXECUTION = False  # re-compute palette or use stored ones
 
 
-def save_palete_colors(colors):
+def save_palete_colors(colors, palette_codes_path):
     df = pd.DataFrame([(list(c.rgb), c.proportion) for c in colors], columns=["color_rgb", "proportion"])
-    df.to_csv(PALETTE_CODES_PATH, index=False)
+    df.to_csv(palette_codes_path, index=False)
 
 
 def get_palette_and_proportion(colors):
@@ -74,7 +74,8 @@ def generate_palette_bars(palette, proportion, output_path):
     plt.savefig(output_path, dpi=100, bbox_inches="tight", format="png")
 
 
-def extract_palette_proportion(collage_im_path, num_colors_palette=NUM_COLORS_PALETTE, save_colors=False):
+def extract_palette_proportion(collage_im_path, num_colors_palette=NUM_COLORS_PALETTE, save_colors=False,
+                                palette_codes_path=PALETTE_CODES_PATH):
     # Load collage
     im_collage = Image.open(collage_im_path)
     # Extract colors
@@ -82,12 +83,13 @@ def extract_palette_proportion(collage_im_path, num_colors_palette=NUM_COLORS_PA
     palette, proportion = get_palette_and_proportion(colors)
     # Save colors
     if save_colors:
-        save_palete_colors(colors)
+        save_palete_colors(colors, palette_codes_path)
     return palette, proportion
 
 def main():
     if FORCE_REEXECUTION or not os.path.isfile(PALETTE_CODES_PATH):
-        palette, proportion = extract_palette_proportion(COLLAGE_PATH, NUM_COLORS_PALETTE, save_colors=True)
+        palette, proportion = extract_palette_proportion(COLLAGE_PATH, NUM_COLORS_PALETTE, save_colors=True,
+                                                            palette_codes_path=PALETTE_CODES_PATH)
     else:
         palette, proportion = get_palette_and_proportion_from_path()
     

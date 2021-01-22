@@ -32,7 +32,7 @@ class IGImageDownloader:
             # Download the post
             try:
                 output_path = self.create_image_name(output_folder, post)
-                bot.download_pic(output_path, url, datetime.datetime.now())
+                self.bot.download_pic(output_path, url, datetime.datetime.now())
             except:
                 break # If there are any errors, we break out of the loop
             time.sleep(SLEEP_TIME)

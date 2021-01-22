@@ -4,8 +4,8 @@ import pandas as pd
 from datetime import datetime
 
 
-PROCESSED_DIR = "data/processed/"  # input
-STATS_DATE_FILE = "results/stats_dates.csv"  # output
+PROCESSED_DIR = "data/processed_arbitrary/"  # input
+STATS_DATE_FILE = "results/stats_dates_arbitrary.csv"  # output
 
 
 def name2date(name):

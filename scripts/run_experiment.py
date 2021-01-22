@@ -8,23 +8,25 @@ from get_palette import extract_palette_proportion, generate_palette_fig, genera
 from utils import load_images
 
 
-DO_DOWNLOAD = True
-DO_PROCESS = True
+DO_DOWNLOAD = False
+DO_PROCESS = False
 DO_COLLAGE = True
 DO_PALETTE = True
 
 NUM_POSTS = 750
-ORIGINAL_DIR = "../data/original_arbitrary"   # "../data/original"
-PROCESSED_DIR = "../data/original_arbitrary"  # "../data/processed"
-COLLAGE_IM = "../results/collage_arbitrary.png" # "../results/collage.png"
-PALETTE_IM = "../results/palette_arbitrary.png"  # "../results/palette.png"
-PALETTE_PROPORTION_IM = "../results/palette_proportion_arbitrary.png"  # "../results/palette_proportion.png"
+ORIGINAL_DIR = "../data/original/"   # "../data/original"
+PROCESSED_DIR = "../data/processed/"  # "../data/processed"
+COLLAGE_IM = "../results/collage.png" # "../results/collage.png"
+PALETTE_IM = "../results/palette.png"  # "../results/palette.png"
+PALETTE_PROPORTION_IM = "../results/palette_proportion.png"  # "../results/palette_proportion.png"
+PALETTE_CODES_PATH = "../results/palette_rgb_codes.csv"
 RESIZE = (100, 100)
-TAGS = ["tbt", "followme", "repost", "photooftheday", "picoftheday", "follow", "like4like", "nature"]  # ["selfcare"]
+TAGS = ["tbt", "followme", "repost", "photooftheday", "picoftheday", "follow", "like4like", "nature",
+        "instagood", "instadaily", "instagram"]  # ["selfcare"]
 
-def run_experiment(tags, num_posts_per_tag, original_dir, processed_dir, resize=(100, 100), collage_image_path,
-                    palette_image_path, palette_proportion_image_path,
-                    do_download=True, do_process=True, do_collage=True, do_palette=True):
+
+def run_experiment(tags, num_posts_per_tag, original_dir, processed_dir, 
+                    collage_image_path, palette_image_path, palette_proportion_image_path, resize=(100, 100),do_download=True, do_process=True, do_collage=True, do_palette=True):
     # Download
     if do_download:
         print(">>> Downloading")
@@ -41,7 +43,11 @@ def run_experiment(tags, num_posts_per_tag, original_dir, processed_dir, resize=
     # Palette
     if do_palette:
         print(">>> Palette")
-        palette, proportion = extract_palette_proportion(collage_image_path)
+        palette, proportion = extract_palette_proportion(
+            collage_image_path,
+            save_colors=True,
+            palette_codes_path=PALETTE_CODES_PATH
+        )
         generate_palette_fig(palette, palette_image_path)
         generate_palette_bars(palette, proportion, palette_proportion_image_path)
 
@@ -50,7 +56,7 @@ def main():
     run_experiment(
         tags=TAGS,
         num_posts_per_tag=NUM_POSTS,
-        original_dir=OUTPUT_FOLDER,
+        original_dir=ORIGINAL_DIR,
         processed_dir=PROCESSED_DIR,
         collage_image_path=COLLAGE_IM,
         palette_image_path=PALETTE_IM, 
