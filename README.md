@@ -58,15 +58,46 @@ In the following, results obtained from both datasets are presented.
 ### 3.1 `#selfcare`
 
 Find below the palette with the 10 most descriptive colours in the dataset. Note that it also illustrates the relative share of importance of each palette component along with its corresponding RGB code. The
-higher the bar, the more presence it had in the dataset. Precise importance values are listed [here](results/palette_rgb_codes_jpg.csv).
+higher the bar, the more presence it had in the dataset. 
 
 ![](results/palette_proportion_jpg.png)
 
+The table below shows the relative importance values:
+
+| RGB colour 	| Relative importance 	|
+|-	|-	|
+| (240, 232, 223) 	| 0.299 	|
+| (186, 159, 134) 	| 0.170 	|
+| (121, 93, 72) 	| 0.111 	|
+| (37, 26, 19) 	| 0.097 	|
+| (216, 226, 236) 	| 0.072 	|
+| (240, 224, 231) 	| 0.064 	|
+| (230, 241, 236) 	| 0.051 	|
+| (21, 28, 44) 	| 0.050 	|
+| (135, 165, 189) 	| 0.047 	|
+| (72, 97, 124) 	| 0.038 	|
+
+<br>
+
 ### 3.2 Generic
-Likewise, the following graph shows the same results for the generic dataset. Precise importance values are listed
-[here](results/palette_rgb_codes_arbitrary_jpg.csv).
+Likewise, the following graph shows the same results for the generic dataset. 
 
 ![](results/palette_proportion_arbitrary_jpg.png)
+
+The table below shows the relative importance values:
+
+|RGB colour   |Relative importance   |
+|---------------|--------------------|
+| (181, 157, 134) |0.169 |
+| (119, 92, 72)   |0.163 |
+| (237, 230, 220) |0.162 |
+| (36, 25, 18)    |0.157 |
+| (21, 27, 42)    |0.084 |
+| (212, 223, 234) |0.063 |
+| (139, 163, 184) |0.060 |
+| (75, 96, 119)   |0.056 |
+
+<br>
 
 ## 4. Use the code
 The core code of the project lives in folder [scripts](scripts), where multiple scripts are found. 
