@@ -55,14 +55,20 @@ Finally, once results for both datasets are obtained:
 * **Comparison**: Palettes obtained from both datasets are compared.
 ## 3. Results
 In the following, results obtained from both datasets are presented.
+
 ### 3.1 `#selfcare`
 
-Find below the palette with the 10 most descriptive colours in the dataset. Note that it also illustrates the relative share of importance of each palette component along with its corresponding RGB code. The
-higher the bar, the more presence it had in the dataset. 
+Find below a graph with the most descriptive 10-colour palette of the selfcare dataset. The horizontal axis shows the RGB colour
+codes and the vertical axis quantifies the relative share of importance of each palette component (i.e. the higher the
+bar, the more presence a colour has in the dataset). We refer to the later as _relative importance_.
+
+**Note**: The _relative importance_ measures the proportion of all images with a given colour. Note that it is
+normalized such that the _relative importance_ of the palette colours add up to 1.
+
 
 ![](results/palette_proportion_jpg.png)
 
-The table below shows the relative importance values:
+The table below shows the _relative importance_ values:
 
 | RGB colour 	| Relative importance 	|
 |-	|-	|
