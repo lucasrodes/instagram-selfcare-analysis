@@ -35,8 +35,10 @@ A total of 3526 images have been retrieved mostly from the following days:
 However, other dates are also present. Details on the date occurences can be found in [this file](results/stats_dates.csv).
 
 ### 1.2 Generic dataset
-A total of 3526 images have been retrieved. There come from different hashtags: `#tbt`, `#followme`, `#repost`, `#photooftheday`,
+A total of 3526 images have been retrieved. They come from different hashtags: `#tbt`, `#followme`, `#repost`, `#photooftheday`,
 `#picoftheday`, `#follow`, `#like4like`, `#nature`, `#instagood`, `#instadaily`, `#instagram`, `#happy`. 
+
+Data was retrieved from different dats, specific date occurences can be found in [this file](results/stats_dates_arbitrary.csv).
 
 We deemed that the images tagged with these 12 hashtags present a wide variety of imagery that may be representative of Instagram as a whole. The hashtags have been obtained from [this list of the most used Instagram hashtags](https://influencermarketinghub.com/most-popular-instagram-hashtags/).
 
@@ -56,20 +58,14 @@ Finally, once results for both datasets are obtained:
 ## 3. Results
 In the following, results obtained from both datasets are presented.
 ### 3.1 `#selfcare`
-The following palette was found as the most descriptive 10-colours palette for the dataset. More details on the colours
-are found in [this file](results/palette_rgb_codes.csv), including their relative importance.
 
-![](results/palette.jpg)
-
-The following bar plot, illustrates the relative share of importance of each palette component along with the corresponding RGB code. The
-higher the bar, the more presence it had in the dataset. Precise values can be found [here](results/palette_rgb_codes_jpg).
-
-![](results/palette_proportion.jpg)
+Find below the palette with the 10 most descriptive colours in the dataset. Note that it also illustrates the relative share of importance of each palette component along with its corresponding RGB code. The
+higher the bar, the more presence it had in the dataset. Precise importance values are listed [here](results/palette_rgb_codes_jpg.csv).
 
 ### 3.2 Generic
-Below I illustrate the palette for a generic post in Instagram.
+Likewise, the following graph shows the same results for the generic dataset. Precise importance values are listed
+[here](results/palette_rgb_codes_arbitrary_jpg.csv).
 
-![](results/palette_arbitrary.jpg)
 ![](results/palette_proportion_arbitrary.jpg)
 
 ## 4. Use the code
