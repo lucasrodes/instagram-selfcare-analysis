@@ -7,12 +7,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-COLLAGE_PATH = "results/collage.jpg" # input file
-PALETTE_PATH = "results/palette_jpg.png" # output file
-PALETTE_PROP_PATH = "results/palette_proportion_jpg.png" # output file
-PALETTE_CODES_PATH = "results/palette_rgb_codes_jpg.csv" # output file
-NUM_COLORS_PALETTE = 10
-FORCE_REEXECUTION = False  # re-compute palette or use stored ones
+COLLAGE_PATH = "results/collage_arbitrary.jpg" # input file
+PALETTE_PATH = "results/palette_arbitrary_100_jpg.png" # output file
+PALETTE_PROP_PATH = "results/palette_arbitrary_100_proportion_jpg.png" # output file
+PALETTE_CODES_PATH = "results/palette_arbitrary_100_rgb_codes_jpg.csv" # output file
+NUM_COLORS_PALETTE = 100
+FORCE_REEXECUTION = True  # re-compute palette or use stored ones
 
 
 def save_palete_colors(colors, palette_codes_path):
@@ -38,17 +38,19 @@ def get_palette_and_proportion_from_path():
 
 def generate_palette_fig(palette, output_path):
     print("> Generating palette...")
-    plt.figure(figsize=(NUM_COLORS_PALETTE*10, 10))
+    num_colors = len(palette[0])
+    plt.figure(figsize=(num_colors*6, 10))
     plt.imshow(palette)
     plt.axis('off')
-    plt.savefig(output_path, dpi=300, format="png")
+    plt.savefig(output_path, dpi=50, format="png")
 
 
 def generate_palette_bars(palette, proportion, output_path):
     print("> Generating palette with proportion img...")
     fig = plt.figure()
     ax = fig.add_axes([0,0,1,1])
-    x = np.arange(0, 10)
+    num_colors = len(proportion)
+    x = np.arange(0, num_colors)
     ax.bar(x, proportion, color=palette[0]/255)
     # Turn off tick labels
     ax.set_yticklabels([])
