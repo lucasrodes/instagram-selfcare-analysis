@@ -62,6 +62,8 @@ In the following, results obtained from both datasets are presented.
 Find below the palette with the 10 most descriptive colours in the dataset. Note that it also illustrates the relative share of importance of each palette component along with its corresponding RGB code. The
 higher the bar, the more presence it had in the dataset. Precise importance values are listed [here](results/palette_rgb_codes_jpg.csv).
 
+![](results/palette_proportion.jpg)
+
 ### 3.2 Generic
 Likewise, the following graph shows the same results for the generic dataset. Precise importance values are listed
 [here](results/palette_rgb_codes_arbitrary_jpg.csv).
