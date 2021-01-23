@@ -36,15 +36,13 @@ However, other dates are also present. Details on the date occurences can be fou
 
 ### 1.2 Generic dataset
 A total of 3526 images have been retrieved. They come from different hashtags: `#tbt`, `#followme`, `#repost`, `#photooftheday`,
-`#picoftheday`, `#follow`, `#like4like`, `#nature`, `#instagood`, `#instadaily`, `#instagram`, `#happy`. 
-
-Data was retrieved from different dats, specific date occurences can be found in [this file](results/stats_dates_arbitrary.csv).
+`#picoftheday`, `#follow`, `#like4like`, `#nature`, `#instagood`, `#instadaily`, `#instagram`, `#happy`. Data was retrieved from different dats, specific date occurences can be found in [this file](results/stats_dates_arbitrary.csv).
 
 We deemed that the images tagged with these 12 hashtags present a wide variety of imagery that may be representative of Instagram as a whole. The hashtags have been obtained from [this list of the most used Instagram hashtags](https://influencermarketinghub.com/most-popular-instagram-hashtags/).
 
 ## 2. Method
 
-For both datasets:
+For both datasets (selfcare and generic):
 
 * **Download images**: Images are downloaded from Instagram posts with specific hashtags using
   [`instaloader`](https://instaloader.github.io/) package.
@@ -62,13 +60,13 @@ In the following, results obtained from both datasets are presented.
 Find below the palette with the 10 most descriptive colours in the dataset. Note that it also illustrates the relative share of importance of each palette component along with its corresponding RGB code. The
 higher the bar, the more presence it had in the dataset. Precise importance values are listed [here](results/palette_rgb_codes_jpg.csv).
 
-![](results/palette_proportion.jpg)
+![](results/palette_proportion_jpg.png)
 
 ### 3.2 Generic
 Likewise, the following graph shows the same results for the generic dataset. Precise importance values are listed
 [here](results/palette_rgb_codes_arbitrary_jpg.csv).
 
-![](results/palette_proportion_arbitrary.jpg)
+![](results/palette_proportion_arbitrary_jpg.png)
 
 ## 4. Use the code
 The core code of the project lives in folder [scripts](scripts), where multiple scripts are found. 
