@@ -8,9 +8,9 @@ import pandas as pd
 
 
 COLLAGE_PATH = "results/collage.jpg" # input file
-PALETTE_PATH = "results/palette.png" # output file
-PALETTE_PROP_PATH = "results/palette_proportion.png" # output file
-PALETTE_CODES_PATH = "results/palette_rgb_codes.csv" # output file
+PALETTE_PATH = "results/palette_jpg.png" # output file
+PALETTE_PROP_PATH = "results/palette_proportion_jpg.png" # output file
+PALETTE_CODES_PATH = "results/palette_rgb_codes_jpg.csv" # output file
 NUM_COLORS_PALETTE = 10
 FORCE_REEXECUTION = False  # re-compute palette or use stored ones
 
